@@ -53,6 +53,8 @@ function spotFound() {
     localStorage.setItem('date', date);
     localStorage.setItem('time', time);
 
+    console.log('Looking for date: ' + date + ' and time: ' + time);
+
     var trs = table.getElementsByTagName('tr');
 
     var found = false;
@@ -92,6 +94,7 @@ function spotFound() {
     }
 
     if (!found) {
+        console.log('Did not find possibility for date: ' + date + ' and time: ' + time);
         setTimeout(() => {
             console.log('Reloading...');
             window.location.href = location;
